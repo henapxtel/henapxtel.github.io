@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}img,video{max-width:100%}[hidden]{display:none!important}</style>
+<title>Hena Patel Portfolio</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hena Patel | Social Media &amp; Marketing Portfolio">
+<meta property="og:description" content="Social media intern at Western USC. Content creation, campaigns and analytics.">
+<meta property="og:url" content="https://mute-base-160e.p-hena0427.workers.dev/">
+<meta property="og:image" content="https://mute-base-160e.p-hena0427.workers.dev/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Hena Patel, social media intern at Western USC. Content creation, campaigns and analytics for social media and marketing roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Mr+Dafoe&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: the portfolio deck, rebuilt as a site. Blush ground, black hairlines, Poppins for text, brush script for section titles, condensed numerals for stats. Work is grouped as brand collaborations, creator highlights, student leadership and community. */
+:root {
+  --bg: #EEE2E4;
+  --surface: #F8F3F4;
+  --tint: #E5D0D3;
+  --fg: #0E0A0B;
+  --muted: #5F5054;
+  --line: #0E0A0B;
+  --hair: #D4BFC3;
+  --btn-bg: #0E0A0B;
+  --btn-fg: #F8F3F4;
+  --frame: #0E0A0B;
+  --font-text: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-script: "Mr Dafoe", "Brush Script MT", cursive;
+  --font-num: "Oswald", "Arial Narrow", Impact, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171113; --surface: #221A1C; --tint: #34272B; --fg: #F4E9EB; --muted: #BBA8AD;
+    --line: #F4E9EB; --hair: #3C2E32; --btn-bg: #F4E9EB; --btn-fg: #171113; --frame: #070405;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #171113; --surface: #221A1C; --tint: #34272B; --fg: #F4E9EB; --muted: #BBA8AD;
+  --line: #F4E9EB; --hair: #3C2E32; --btn-bg: #F4E9EB; --btn-fg: #171113; --frame: #070405;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--fg);
+  font: 400 16px/1.65 var(--font-text);
+  padding-block: 0 40px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+img { display: block; max-width: 100%; }
+p { margin: 0; }
+a { color: inherit; }
+h1, h2, h3, h4 { margin: 0; font-weight: 400; text-wrap: balance; }
+:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1160px; margin: 0 auto; }
+.kicker { font: 500 12px/1.2 var(--font-text); letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+.script { font-family: var(--font-script); font-weight: 400; line-height: 1.15; letter-spacing: 0; }
+.num { font-family: var(--font-num); font-weight: 700; letter-spacing: 0.005em; line-height: 1; font-variant-numeric: tabular-nums; text-transform: uppercase; }
+.muted { color: var(--muted); }
+
+/* nav */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; padding-block: 14px; }
+.brand { font: 400 2rem/1 var(--font-script); text-decoration: none; }
+.nav ul { display: flex; gap: 6px 26px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; font-size: 14px; font-weight: 500; }
+.nav ul a { text-decoration: none; padding: 4px 0; border-bottom: 1px solid transparent; }
+.nav ul a:hover { border-bottom-color: var(--fg); }
+
+/* buttons */
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 500 15px/1 var(--font-text); padding: 15px 26px; border-radius: 999px; border: 1.5px solid var(--btn-bg); background: var(--btn-bg); color: var(--btn-fg); text-decoration: none; cursor: pointer; transition: transform .15s ease; }
+.btn.ghost { background: transparent; color: var(--fg); border-color: var(--fg); }
+.btn:hover { transform: translateY(-2px); }
+.btn.small { padding: 10px 16px; font-size: 13px; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); gap: 56px; align-items: end; padding-block: 72px 80px; }
+.hero h1 { font: 400 clamp(3.4rem, 10.5vw, 8rem)/0.95 var(--font-text); letter-spacing: -0.04em; margin-top: 20px; }
+.hero .sub { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-top: 8px; }
+.hero .lede { margin-top: 24px; max-width: 48ch; font-size: 18px; color: var(--muted); }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
+.quick { margin-top: 48px; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0; border-top: 1px solid var(--line); }
+.quick div { padding: 18px 28px 0 0; }
+.quick div + div { padding-left: 28px; border-left: 1px solid var(--hair); }
+.quick .num { font-size: clamp(2rem, 4.5vw, 3rem); display: block; }
+.quick span:last-child { font-size: 13px; color: var(--muted); }
+.arch { border: 1.5px solid var(--line); border-radius: 999px 999px 0 0; overflow: hidden; background: var(--tint); aspect-ratio: 2 / 3; width: 100%; max-width: 440px; margin-left: auto; }
+.arch img { width: 100%; height: 100%; object-fit: cover; }
+
+/* sections */
+section { border-top: 1px solid var(--line); padding-block: 88px; }
+.sec-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 48px; }
+.sec-head h2 { font-size: clamp(3rem, 8vw, 5.5rem); }
+.sec-head p { color: var(--muted); max-width: 60ch; }
+.pill { background: var(--surface); border-radius: 36px; padding: 14px 40px 4px; display: inline-block; align-self: flex-start; }
+.pill h2 { font-size: clamp(2.6rem, 7vw, 4.4rem); }
+
+/* about tiles */
+.about { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 900px; margin-inline: auto; }
+.about figure { margin: 0; background: var(--tint); border-radius: 24px; aspect-ratio: 5 / 6; position: relative; overflow: hidden; padding: 20px 18px 0; }
+.about figcaption { font: 400 clamp(1.5rem, 2.6vw, 2rem)/1.1 var(--font-script); position: relative; z-index: 1; }
+.about img { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: auto; max-width: none; }
+.about .red img { height: 68%; }
+.about .cam img { height: 76%; }
+.about .lab img { height: auto; width: 100%; }
+
+/* stats */
+.platforms { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 20px; }
+.platform { display: flex; align-items: center; gap: 20px; background: var(--surface); border-radius: 24px; padding: 20px 24px; text-decoration: none; }
+.platform img { width: 76px; height: 76px; border-radius: 18px; flex: none; }
+.platform .num { font-size: 2.4rem; display: block; }
+.platform small { display: block; font-size: 14px; color: var(--muted); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 40px; }
+.stat { padding: 36px 24px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.stat + .stat { border-left: 1px solid var(--hair); }
+.stat .num { font-size: clamp(3.4rem, 8vw, 6rem); }
+.stat .cap { font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+.stat .when { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.audience { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 40px; }
+.audience h3 { font: 600 13px/1 var(--font-text); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 20px; }
+.split { display: flex; height: 56px; border-radius: 14px; overflow: hidden; font-family: var(--font-num); font-weight: 700; font-size: 1.5rem; }
+.split div { display: flex; align-items: center; padding-inline: 16px; }
+.split .f { background: var(--fg); color: var(--bg); }
+.split .m { background: var(--tint); color: var(--fg); flex: 1; justify-content: flex-end; }
+.legend { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 8px; }
+.bars { display: flex; flex-direction: column; gap: 14px; }
+.bar { display: grid; grid-template-columns: 84px minmax(0, 1fr) 56px; align-items: center; gap: 12px; font-size: 14px; }
+.bar .track { height: 14px; background: var(--tint); border-radius: 8px; overflow: hidden; }
+.bar .fill { height: 100%; background: var(--fg); border-radius: 8px; }
+.bar b { font-family: var(--font-num); font-size: 1.15rem; font-variant-numeric: tabular-nums; }
+
+/* phones */
+.phones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.phone { margin: 0; display: flex; flex-direction: column; gap: 16px; align-items: stretch; }
+.screen { aspect-ratio: 9 / 16; border: 7px solid var(--frame); border-radius: 30px; overflow: hidden; background: var(--frame); position: relative; }
+.screen img, .screen video { display: block; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+.screen::after { content: ""; position: absolute; top: 8px; left: 50%; width: 30%; height: 6px; border-radius: 4px; background: var(--frame); transform: translateX(-50%); opacity: .7; }
+.phone .brandline { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.logo { width: 44px; height: 44px; border-radius: 50%; background: #fff; flex: none; overflow: hidden; display: grid; place-items: center; }
+.logo img { width: 100%; height: 100%; object-fit: contain; }
+.phone strong { font-weight: 600; display: block; line-height: 1.25; }
+.phone small { color: var(--muted); font-size: 13px; display: block; }
+
+.logo-card { background: var(--tint); border-radius: 24px; padding: clamp(20px, 3vw, 32px) 24px; max-width: 320px; width: 100%; justify-self: end; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.logo-card img { width: min(100%, 130px); height: auto; margin-bottom: 6px; }
+.logo-card .name { font: 500 1.25rem/1.2 var(--font-text); letter-spacing: -0.01em; }
+
+/* feature blocks */
+.feature { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; padding-top: 72px; margin-top: 72px; border-top: 1px solid var(--hair); }
+.feature.flip { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); }
+.feature.flip .copy { order: 2; }
+.feature h3 { font: 500 clamp(1.8rem, 3.6vw, 2.6rem)/1.15 var(--font-text); letter-spacing: -0.02em; }
+.feature .copy { display: flex; flex-direction: column; gap: 20px; }
+.feature .copy p { color: var(--muted); max-width: 52ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; }
+.fact { background: var(--surface); border-radius: 999px; padding: 8px 16px; font-size: 14px; font-weight: 500; }
+.fact b { font-family: var(--font-num); font-size: 1.1rem; letter-spacing: .01em; margin-right: 4px; }
+.code { display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14px; }
+.code code { font: 500 14px/1 ui-monospace, "SF Mono", Menlo, monospace; background: var(--surface); border-radius: 10px; padding: 10px 12px; letter-spacing: .06em; user-select: all; }
+.mosaic { display: grid; gap: 12px; }
+.mosaic img, .shot { border-radius: 18px; width: 100%; height: 100%; object-fit: cover; background: var(--tint); }
+.shot { border: 1px solid var(--hair); }
+video.shot { display: block; cursor: pointer; }
+.deliver { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--hair); }
+.deliver li { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--hair); }
+.deliver b { font-weight: 600; }
+.deliver span { color: var(--muted); font-size: 15px; text-align: right; }
+.sokora-feat { align-items: center; }
+.sokora-feat .m-sokora { max-width: 420px; justify-self: end; width: 100%; }
+@media (max-width: 900px) { .sokora-feat .m-sokora { justify-self: stretch; max-width: none; } .deliver li { flex-direction: column; gap: 2px; } .deliver span { text-align: left; } }
+.m-sokora { grid-template-columns: 1.3fr 1fr; grid-template-rows: auto auto; }
+.m-sokora .tall { grid-row: span 2; }
+.m-sokora img { aspect-ratio: auto; }
+.m-sokora .a { aspect-ratio: 2 / 3; }
+.m-sokora .b, .m-sokora .c { aspect-ratio: 4 / 5; }
+.m-duo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.m-duo img { aspect-ratio: 3 / 5; }
+.m-lens { grid-template-columns: 1.2fr 0.8fr; }
+.m-lens img { aspect-ratio: 3 / 4; }
+.brands3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.brandcard { background: var(--surface); border-radius: 20px; padding: 18px 12px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.brandcard .logo { width: 72px; height: 72px; }
+.brandcard strong { font-weight: 600; font-size: 14px; line-height: 1.2; }
+.brandcard .num { font-size: 1.6rem; }
+.brandcard small { font-size: 12px; color: var(--muted); line-height: 1.2; }
+
+/* creator highlight */
+.celebs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; max-width: 880px; margin-inline: auto; }
+.celeb { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 24px; align-items: center; }
+.celeb .who { display: flex; flex-direction: column; gap: 4px; }
+.celeb .who strong { font-weight: 600; font-size: 1.1rem; }
+.celeb .who .num { font-size: 2.4rem; margin-top: 8px; }
+.celeb .who small { color: var(--muted); }
+.lead { text-align: center; max-width: 62ch; margin: 48px auto 0; font-size: 18px; }
+.big { font-size: clamp(3.4rem, 8vw, 6.5rem); max-width: 100%; }
+.passion { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
+.passion .num.big { display: block; }
+.strips { display: flex; flex-direction: column; gap: 12px; }
+.strips img { width: 100%; height: auto; border-radius: 16px; }
+.quad { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.links { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.sec-head.small h2 { font-size: clamp(2.2rem, 5.5vw, 3.6rem); }
+.stats.compact .stat { padding: 24px 20px; gap: 8px; }
+.stats.compact .num { font-size: clamp(2.2rem, 5vw, 3.4rem); }
+.cards3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 56px; }
+.card3 { background: var(--surface); border-radius: 22px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card3 h4 { font: 600 1.2rem/1.3 var(--font-text); letter-spacing: -0.01em; margin: 0; }
+.card3 p:last-child { color: var(--muted); font-size: 15px; }
+.gtiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 32px; }
+.gtiles .gframe { aspect-ratio: 4 / 5; }
+
+@media (min-width: 901px) { .feature.wide-vis { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); } }
+.mbox-vis { display: grid; grid-template-columns: 4fr 3fr 3fr; gap: 16px; align-items: start; }
+@media (max-width: 700px) { .mbox-vis { grid-template-columns: 1fr 1fr; } .mbox-vis .mbox-photo { grid-column: 1 / -1; } }
+.mbox-vis figure { margin: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.mbox-photo img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; background: var(--tint); }
+.mbox-vis strong { font-weight: 600; display: block; line-height: 1.25; }
+.mbox-vis small { color: var(--muted); font-size: 13px; display: block; }
+.creators { margin-top: 56px; }
+.card3 h4 a { text-decoration: none; border-bottom: 1px solid var(--hair); }
+.card3 h4 a:hover { border-bottom-color: var(--fg); }
+.phones2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 460px; }
+
+/* leadership */
+.gsa-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 40px; }
+.gcol { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.gframe { position: relative; margin: 0; border-radius: 18px; overflow: hidden; background: var(--tint); border: 1px solid var(--hair); min-width: 0; }
+.gcol .gframe { aspect-ratio: 16 / 10; }
+.gframe img, .gframe video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gframe video { cursor: pointer; }
+.gframe.tall { aspect-ratio: 4 / 5; }
+.gframe .lbl { position: absolute; left: 12px; bottom: 12px; background: var(--surface); color: var(--fg); font: 500 12px/1 var(--font-text); padding: 8px 12px; border-radius: 999px; pointer-events: none; }
+@media (min-width: 901px) {
+  .gframe.tall { aspect-ratio: auto; }
+  .gframe.tall img { position: absolute; inset: 0; }
+}
+@media (max-width: 900px) { .gsa-grid { grid-template-columns: 1fr; } }
+
+figcaption.cap { font-size: 13px; color: var(--muted); }
+.look { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.look img { border-radius: 16px; width: 100%; height: 100%; object-fit: cover; }
+.look .g { grid-column: span 2; grid-row: span 2; aspect-ratio: 2 / 3; }
+.look .w { grid-column: span 4; aspect-ratio: 3 / 2; }
+.look .mn { grid-column: span 2; aspect-ratio: 3 / 2; }
+.look .cv { grid-column: span 2; aspect-ratio: 4 / 5; }
+.gatsby { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-top: 12px; }
+.gatsby img, .gatsby video { display: block; border-radius: 16px; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+.gatsby video { cursor: pointer; }
+
+/* community */
+.duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px; align-items: start; }
+.duo > div { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.duo h3 { font: 500 clamp(1.8rem, 3.6vw, 2.6rem)/1.15 var(--font-text); letter-spacing: -0.02em; }
+.duo p { color: var(--muted); max-width: 52ch; }
+.row2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.row2 img { border-radius: 18px; width: 100%; height: 100%; object-fit: cover; }
+
+/* contact */
+.contact { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 56px; align-items: center; }
+.contact h2 { font-size: clamp(3.4rem, 9vw, 6.4rem); }
+.contact .tag { font: 400 clamp(1.7rem, 3.4vw, 2.5rem)/1.25 var(--font-text); letter-spacing: -0.02em; margin-top: 32px; max-width: 16ch; }
+.rows { list-style: none; margin: 40px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.rows li { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.rows .ico { width: 34px; height: 34px; border-radius: 50%; background: var(--fg); color: var(--bg); display: grid; place-items: center; flex: none; }
+.rows .ico svg { width: 16px; height: 16px; }
+.rows .val { font-size: 18px; user-select: all; overflow-wrap: anywhere; }
+.arch.cut { background: var(--tint); display: flex; align-items: flex-end; justify-content: center; }
+.arch.cut img { width: auto; height: 92%; object-fit: contain; }
+footer { border-top: 1px solid var(--line); padding-top: 24px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+footer .script { font-size: 1.8rem; color: var(--fg); }
+
+@media (max-width: 900px) {
+  .hero, .feature, .feature.flip, .passion, .duo, .contact { grid-template-columns: 1fr; gap: 40px; }
+  .feature.flip .copy { order: 0; }
+  .arch { margin-inline: 0; max-width: 360px; }
+  .phones { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 16px; }
+  .about { grid-template-columns: 1fr; }
+  .about { max-width: 420px; }
+  .about figure { aspect-ratio: 1 / 1; }
+  .platforms, .audience { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .stat + .stat { border-left: 0; border-top: 1px solid var(--hair); }
+    .celebs { grid-template-columns: 1fr; }
+  section { padding-block: 64px; }
+  .feature { padding-top: 56px; margin-top: 56px; }
+}
+@media (max-width: 520px) {
+  .quick { grid-template-columns: 1fr; }
+  .quick div, .quick div + div { padding: 14px 0; border-left: 0; border-bottom: 1px solid var(--hair); display: flex; align-items: baseline; gap: 14px; }
+  .quick .num { font-size: 2.2rem; }
+  .pill { padding-inline: 24px; }
+  .celeb { grid-template-columns: 1fr; }
+  .celeb .screen { max-width: 220px; }
+  .brands3 { grid-template-columns: 1fr; }
+  .look { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .look .g, .look .w, .look .mn, .look .cv { grid-column: span 1; grid-row: auto; aspect-ratio: 4 / 5; }
+  .look .w { grid-column: span 2; aspect-ratio: 3 / 2; }
+  .bar { grid-template-columns: 74px minmax(0, 1fr) 52px; }
+  .nav ul { gap: 4px 18px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Hena Patel</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#usc">Western USC</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#collabs">Brand work</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+
+  <div class="hero">
+    <div>
+      <p class="kicker">Social media &amp; marketing</p>
+      <h1>Hena Patel</h1>
+      <p class="script sub">Social Media Portfolio</p>
+      <p class="lede">Social media intern at Western USC, creating content for a 41.9K-follower Instagram and turning performance data into analytics reports. My orientation series earned 479.9K views from first-years, and my Mustang Move-In Box campaign hit a 5.46% engagement rate.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#usc">See my work</a>
+      </div>
+      <p class="kicker" style="margin-top:28px">Skills</p>
+      <div class="facts" style="margin-top:10px"><span class="fact">Adobe Suite</span><span class="fact">Management</span><span class="fact">Content calendars</span><span class="fact">Content strategy</span><span class="fact">Short-form video</span><span class="fact">Canva design</span><span class="fact">Photography</span><span class="fact">Analytics</span></div>
+      <div class="quick">
+        <div><span class="num">8,890</span><span>TikTok followers</span></div>
+        <div><span class="num">1M</span><span>TikTok likes</span></div>
+        <div><span class="num">996.5K</span><span>Top TikTok views</span></div>
+      </div>
+    </div>
+    <div class="arch"><img src="img/portrait-hero.webp" alt="Hena Patel smiling over her shoulder in a white off-the-shoulder dress, leaning on a stone wall" width="800" height="1144"></div>
+  </div>
+
+  <section id="usc" aria-label="Western USC">
+    <div class="sec-head" style="margin-bottom:28px">
+      <p class="kicker">Social media intern</p>
+      <h2 class="script">Western USC</h2>
+      <p>University Students' Council, Western University</p>
+    </div>
+
+    <article class="feature" style="margin-top:0;padding-top:0;border-top:0;gap:40px">
+      <div class="copy">
+        <p class="kicker">Current role</p>
+        <h3>Social media intern</h3>
+        <p>I create content for Western USC's social channels and write analytics reports on how that content performs. Through Western USC I have also created content for Aquaphor and BMO.</p>
+        <div class="links"><a class="btn ghost small" href="https://www.instagram.com/westernusc/" target="_blank" rel="noopener">Western USC on Instagram</a><a class="btn ghost small" href="https://www.tiktok.com/@westernusc" target="_blank" rel="noopener">Western USC on TikTok</a></div>
+      </div>
+      <div class="logo-card">
+        <img src="img/usc-logo.webp" alt="Western USC logo: University Students' Council, Western University" width="295" height="295">
+        <p class="name">Western USC</p>
+      </div>
+    </article>
+
+    <div class="stats" style="margin-top:36px">
+      <div class="stat"><span class="when">Instagram</span><span class="num">41.9K</span><span class="cap">Followers</span></div>
+      <div class="stat"><span class="when">TikTok</span><span class="num">8,702</span><span class="cap">Followers</span></div>
+      <div class="stat"><span class="when">TikTok</span><span class="num">473K</span><span class="cap">Total likes</span></div>
+    </div>
+
+    <div class="cards3">
+      <div class="card3"><p class="kicker">Content</p><h4>Content creation</h4><p>I create content for Western USC's Instagram and TikTok accounts.</p></div>
+      <div class="card3"><p class="kicker">Reporting</p><h4>Analytics reports</h4><p>I write analytics reports on how the content performs.</p></div>
+      <div class="card3"><p class="kicker">Partners</p><h4>Aquaphor and BMO</h4><p>Through Western USC, I created content for Aquaphor and BMO.</p></div>
+    </div>
+
+    <article class="feature wide-vis">
+      <div class="copy">
+        <p class="kicker">PR campaign &middot; First-year students</p>
+        <h3>The Mustang Move-In Box</h3>
+        <p>I created the Mustang Move-In Box, a PR box for first-year students, so Western could feel more like home. I gave it a luggage design, and it was sent to five first-year influencers.</p>
+      </div>
+      <div class="mbox-vis">
+        <figure class="mbox-photo"><img src="img/mustang-box.webp" alt="The Mustang Move-In Box: a white gift box with a purple luggage strap design and a lavender ribbon, open to show Western USC items and a handwritten postcard" loading="lazy" width="900" height="1224"><figcaption><strong>The Mustang Move-In Box</strong><small>Luggage design</small></figcaption></figure>
+        <figure class="phone"><div class="screen"><video src="vid/mustang2.mp4" poster="vid/mustang2-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="A first-year influencer unboxing the Mustang Move-In Box and showing the luggage design. Press to pause or play." width="360" height="640"></video></div><figcaption><strong>Unboxing by @taylivibrand</strong><small>First-year influencer</small></figcaption></figure>
+        <figure class="phone"><div class="screen"><video src="vid/mustang.mp4" poster="vid/mustang-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="A first-year influencer unboxing the Mustang Move-In Box. Press to pause or play." width="360" height="640"></video></div><figcaption><strong>Unboxing by @lillyytremblayy</strong><small>First-year influencer</small></figcaption></figure>
+      </div>
+    </article>
+
+    <div class="stats" style="margin-top:56px">
+      <div class="stat"><span class="when">Total video views</span><span class="num">39,242</span></div>
+      <div class="stat"><span class="when">Engagement rate</span><span class="num">5.46%</span></div>
+      <div class="stat"><span class="when">Sent to</span><span class="num">5</span><span class="cap">First-year influencers</span></div>
+    </div>
+
+    <article class="feature flip">
+      <div class="copy">
+        <p class="kicker">Passion project</p>
+        <h3>An original orientation series for 6,000+ first-years</h3>
+        <p>Developed and launched an original two week social media series at Western University targeting 6,000+ incoming first year students. It generated 479.9K views through Instagram Reels, carousel posts and TikTok videos.</p>
+        <span class="num big">479.9K</span>
+        <p class="kicker" style="margin-top:-8px">Views in two weeks</p>
+      </div>
+      <div class="strips">
+        <div class="trio">
+          <img src="img/usc-reel-65k.webp" alt="Reel cover of a performer on stage at the concert, 65.4K views" loading="lazy" width="380" height="508">
+          <img src="img/usc-reel-2.webp" alt="Reel cover of students dancing at night, purple rodeo, 49.6K views" loading="lazy" width="420" height="560">
+          <img src="img/usc-reel-3.webp" alt="Reel cover of a student walking toward the opening ceremonies stage, 36.5K views" loading="lazy" width="420" height="565">
+        </div>
+        <div class="quad">
+          <img src="img/usc-reel-28k.webp" alt="Reel cover of The Chainsmokers on stage in pink smoke, 28.3K views" loading="lazy" width="380" height="510">
+          <img src="img/usc-reel-29k.webp" alt="Reel cover of students at the concert in purple light, 29.4K views" loading="lazy" width="380" height="508">
+          <img src="img/usc-reel-12k.webp" alt="Reel cover of a student dancing at night, 12.2K views" loading="lazy" width="380" height="508">
+          <img src="img/usc-reel-1.webp" alt="Reel cover of the orientation team outside with 9,422 views" loading="lazy" width="420" height="562">
+        </div>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="copy">
+        <p class="kicker">Celebrity content</p>
+        <h3>Filming The Chainsmokers and Johnny Orlando</h3>
+        <p>I had the opportunity to film content featuring celebrities, including The Chainsmokers and Johnny Orlando, for Western USC's social media platforms.</p>
+        <div class="facts"><span class="fact"><b>7.3M</b> The Chainsmokers on Instagram</span><span class="fact"><b>5.8M</b> Johnny Orlando on Instagram</span></div>
+      </div>
+      <div class="phones2">
+        <figure class="phone"><div class="screen"><video src="vid/johnny.mp4" poster="vid/johnny-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Johnny Orlando performing on stage. Press to pause or play." width="360" height="640"></video></div><figcaption><strong>Johnny Orlando</strong><small>@johnnyorlando</small></figcaption></figure>
+        <figure class="phone"><div class="screen"><video src="vid/chainsmokers.mp4" poster="vid/chainsmokers-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="The Chainsmokers performing at a festival. Press to pause or play." width="360" height="640"></video></div><figcaption><strong>The Chainsmokers</strong><small>@thechainsmokers</small></figcaption></figure>
+      </div>
+    </article>
+  </section>
+
+  <section id="stats" aria-label="Stats and audience">
+    <div class="sec-head">
+      <div class="pill"><h2 class="script">Stats &amp; Audience</h2></div>
+    </div>
+    <div class="platforms">
+      <a class="platform" href="https://www.tiktok.com/@henapxtel" target="_blank" rel="noopener"><img src="img/icon-tiktok.webp" alt="" width="221" height="221"><div><span class="num">8,890</span><small>TikTok followers &middot; @henapxtel</small></div></a>
+      <a class="platform" href="https://www.instagram.com/henapxtel/" target="_blank" rel="noopener"><img src="img/icon-instagram.webp" alt="" width="221" height="221"><div><span class="num">1,668</span><small>Instagram followers &middot; @henapxtel</small></div></a>
+    </div>
+    <div class="stats">
+      <div class="stat"><span class="when">In the last 30 days</span><span class="num">92.1K</span><span class="cap">Instagram profile views</span></div>
+      <div class="stat"><span class="when">Total of</span><span class="num">1M</span><span class="cap">TikTok likes</span></div>
+      <div class="stat"><span class="when">May 2024</span><span class="num">996.5K</span><span class="cap">Highest viewed TikTok</span></div>
+    </div>
+    <div class="audience">
+      <div>
+        <h3>Viewers by gender</h3>
+        <div class="split" role="img" aria-label="58 percent female viewers, 41 percent male viewers"><div class="f" style="width:58%">58%</div><div class="m">41%</div></div>
+        <div class="legend"><span>Female viewers</span><span>Male viewers</span></div>
+      </div>
+      <div>
+        <h3>Viewers by age</h3>
+        <div class="bars">
+          <div class="bar"><span>18 - 24</span><div class="track"><div class="fill" style="width:35.3%"></div></div><b>35.3%</b></div>
+          <div class="bar"><span>25 - 34</span><div class="track"><div class="fill" style="width:39.7%"></div></div><b>39.7%</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collabs" aria-label="Brand collaborations">
+    <div class="sec-head">
+      <p class="kicker">Brand work</p>
+      <h2 class="script">Brand Collaborations</h2>
+      <p>Product features, unboxings and campaign content for jewellery, fashion and coloured contact lens brands.</p>
+    </div>
+    <div class="phones">
+      <figure class="phone"><div class="screen"><video src="vid/sokora.mp4" poster="vid/sokora-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Hena unboxing a green Sokora Jewels box. Press to pause or play." width="360" height="640"></video></div><figcaption class="brandline"><span class="logo"><img src="img/logo-sokora.webp" alt="" width="500" height="500"></span><span><strong>Sokora Jewels</strong><small>554K Instagram followers</small></span></figcaption></figure>
+      <figure class="phone"><div class="screen"><video src="vid/eyemua.mp4" poster="vid/eyemua-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Hena opening an EyeMUA box. Press to pause or play." width="360" height="640"></video></div><figcaption class="brandline"><span class="logo"><img src="img/logo-eyemua.webp" alt="" width="360" height="360"></span><span><strong>EyeMUA</strong><small>12.3K Instagram followers</small></span></figcaption></figure>
+      <figure class="phone"><div class="screen"><video src="vid/ttdeye.mp4" poster="vid/ttdeye-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Hena unboxing a TTDEYE package. Press to pause or play." width="360" height="640"></video></div><figcaption class="brandline"><span class="logo"><img src="img/logo-ttdeye.webp" alt="" width="225" height="225"></span><span><strong>TTDEYE</strong><small>1M Instagram followers</small></span></figcaption></figure>
+      <figure class="phone"><div class="screen"><video src="vid/just4kira.mp4" poster="vid/just4kira-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Hena trying on coloured contacts from Just4Kira. Press to pause or play." width="360" height="640"></video></div><figcaption class="brandline"><span class="logo"><img src="img/logo-just4kira.webp" alt="" width="225" height="225"></span><span><strong>Just4Kira</strong><small>133K Instagram followers</small></span></figcaption></figure>
+    </div>
+
+    <article class="feature sokora-feat">
+      <div class="copy">
+        <p class="kicker">Jewellery &middot; Photoshoot and reels</p>
+        <h3>Sokora Jewels</h3>
+        <p>I conducted a photoshoot, created Instagram posts and designed three TikTok reels to showcase and upsell the jewellery. I incorporated my own affiliate code.</p>
+        <ul class="deliver">
+          <li><b>Photoshoot</b><span>Conducted the shoot to feature the jewellery</span></li>
+          <li><b>Instagram posts</b><span>Created posts for a 554K-follower brand</span></li>
+          <li><b>3 TikTok reels</b><span>Designed to showcase and upsell the pieces</span></li>
+        </ul>
+        <div class="code"><span>Affiliate code</span><code>HENAPXTEL10</code><button class="btn ghost small" type="button" data-copy="HENAPXTEL10">Copy code</button></div>
+      </div>
+      <div class="mosaic m-sokora">
+        <img class="tall a" src="img/sokora-photo.webp" alt="Hena in a sequined light blue lehenga with silver jewellery" loading="lazy" width="760" height="1140">
+        <img class="b" src="img/sokora-detail.webp" alt="Close up of the lehenga and layered silver necklace" loading="lazy" width="520" height="923">
+        <img class="c" src="img/sokora-box.webp" alt="Sokora Jewels box with a silver necklace set inside" loading="lazy" width="520" height="925">
+      </div>
+    </article>
+
+    <article class="feature flip">
+      <div class="copy">
+        <p class="kicker">Beauty &middot; Unboxing and review content</p>
+        <h3>Coloured eye contact collaborations</h3>
+        <p>Unboxing and try-on content for three coloured contact lens brands, each with my own discount code for my audience.</p>
+        <div class="brands3">
+          <div class="brandcard"><span class="logo"><img src="img/logo-just4kira.webp" alt="" loading="lazy" width="225" height="225"></span><strong>Just4Kira</strong><span class="num">133K</span><small>Instagram followers</small></div>
+          <div class="brandcard"><span class="logo"><img src="img/logo-ttdeye.webp" alt="" loading="lazy" width="225" height="225"></span><strong>TTDEYE</strong><span class="num">1M</span><small>Instagram followers</small></div>
+          <div class="brandcard"><span class="logo"><img src="img/logo-eyemua.webp" alt="" loading="lazy" width="360" height="360"></span><strong>EyeMUA</strong><span class="num">12.3K</span><small>Instagram followers</small></div>
+        </div>
+        <div class="code"><span>Discount code</span><code>HENAPXTEL</code><button class="btn ghost small" type="button" data-copy="henapxtel">Copy code</button></div>
+      </div>
+      <div class="mosaic m-lens">
+        <img src="img/just4kira-box.webp" alt="Open Just4Kira box with boxed coloured contact lenses" loading="lazy" width="700" height="933">
+        <img src="img/eyemua-reel.webp" alt="Hena holding an EyeMUA box in a reel" loading="lazy" width="420" height="741">
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="copy">
+        <p class="kicker">Fashion &middot; Modelling and reels</p>
+        <h3>Chandan Fashion and the Consulate General of India, Toronto</h3>
+        <p>Created reels while modelling clothing pieces for Chandan Fashion, and for an International Women's Day campaign with the Consulate General of India Toronto. The content supported brand promotion, audience engagement and cultural diversity.</p>
+        <div class="facts"><span class="fact"><b>95K</b> Chandan Fashion followers</span><span class="fact">International Women's Day campaign</span></div>
+      </div>
+      <div class="mosaic m-duo">
+        <img src="img/consulate-iwd.webp" alt="Hena in a green and gold outfit at the Consulate General of India in Toronto" loading="lazy" width="700" height="1244">
+        <img src="img/chandan-runway.webp" alt="Hena in a red embroidered lehenga on the Chandan runway" loading="lazy" width="700" height="1166">
+      </div>
+    </article>
+  </section>
+
+  <section id="leadership" aria-label="Student leadership">
+    <div class="sec-head small">
+      <p class="kicker">Vice President, Promotions &amp; Marketing</p>
+      <h2 class="script">Western Gujarati Students Association</h2>
+      <p>I lead promotions and marketing for the association, from executive reveals and Canva graphics to the Great Gatsby themed Shaandaar annual formal campaign, including a lookbook I photographed and designed into an Instagram post.</p>
+    </div>
+    <div class="stats compact" style="margin-top:0">
+      <div class="stat"><span class="when">Profile visits, in one year</span><span class="num">+57.7%</span></div>
+      <div class="stat"><span class="when">Instagram followers</span><span class="num">1,707</span></div>
+      <div class="stat"><span class="when">Views in the last 30 days</span><span class="num">194.5K</span></div>
+    </div>
+    <div class="gtiles">
+      <figure class="gframe"><video src="vid/gatsby.mp4" poster="vid/gatsby-poster.webp" muted loop playsinline autoplay preload="metadata" tabindex="0" aria-label="Great Gatsby themed Shaandaar title animation with gold art deco lines. Press to pause or play." width="800" height="500"></video><span class="lbl">Shaandaar title video</span></figure>
+      <figure class="gframe"><img src="img/gsa-coreteam.webp" alt="Meet the GSA core team Canva post with polaroid photos" loading="lazy" width="432" height="540"><span class="lbl">Canva post: core team</span></figure>
+      <figure class="gframe"><img src="img/look-cover.webp" alt="Shaandaar official lookbook cover with the group seated in a theatre" loading="lazy" width="700" height="875"><span class="lbl">Shaandaar lookbook</span></figure>
+    </div>
+    <div class="links" style="margin-top:20px"><a class="btn ghost small" href="https://www.instagram.com/p/DTBWHSLkUBy/?img_index=1" target="_blank" rel="noopener">View the lookbook post</a></div>
+  </section>
+
+  <section id="community" aria-label="Community and sports content">
+    <div class="sec-head">
+      <p class="kicker">Community</p>
+      <h2 class="script">More of my content</h2>
+    </div>
+    <div class="duo">
+      <div>
+        <h3>Relatable content</h3>
+        <p>I love making relatable content. My videos have been shared by community meme pages gujju.gangs (88.4K followers) and itsjustmallu (78.6K followers), including reels that reached 1.5M and 88.1K views.</p>
+        <div class="facts"><span class="fact"><b>1.5M</b> top reel views</span><span class="fact"><b>88.4K</b> gujju.gangs</span><span class="fact"><b>78.6K</b> itsjustmallu</span></div>
+        <div class="row2">
+          <img src="img/meme-reels.webp" alt="gujju.gangs reels page showing videos with 1.5M and 88.1K views" loading="lazy" width="640" height="748" style="aspect-ratio:3/4">
+          <img src="img/meme-tagged.webp" alt="itsjustmallu reel tagged with henapxtel" loading="lazy" width="420" height="913" style="aspect-ratio:3/4">
+        </div>
+      </div>
+      <div>
+        <h3>KW Rockers Cricket Team</h3>
+        <p>Creating content for match days, win announcements and jersey reveals, and conducting player interviews during the summer season. The goal was to increase exposure and attract new members to the team.</p>
+        <div class="facts"><span class="fact">UFCL Premier 2026 champions</span><span class="fact">Match day graphics</span><span class="fact">Player interviews</span></div>
+        <div class="row2">
+          <img src="img/kw-champions.webp" alt="Champions graphic for the KW Rockers, UFCL Premier 2026" loading="lazy" width="700" height="875" style="aspect-ratio:4/5">
+          <img src="img/kw-potm.webp" alt="Player of the match graphic with 70 runs, 47 balls, 5 sixes and 8 fours" loading="lazy" width="700" height="875" style="aspect-ratio:4/5">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" aria-label="About">
+    <div class="sec-head">
+      <p class="kicker">About</p>
+      <h2 class="script">A little about me</h2>
+    </div>
+    <div class="about">
+      <figure class="red"><figcaption>i love creating content!</figcaption><img src="img/cut-red.webp" alt="Hena smiling with hands on hips" width="332" height="441"></figure>
+      <figure class="cam"><figcaption>always taking pictures</figcaption><img src="img/cut-camera.webp" alt="Hena taking a photo with a compact camera" width="516" height="800"></figure>
+      <figure class="lab"><figcaption>Bachelor of Science in Biology</figcaption><img src="img/cut-lab.webp" alt="Hena in a lab coat and safety glasses" width="1048" height="800"></figure>
+    </div>
+  </section>
+
+  <section id="contact" aria-label="Contact">
+    <div class="contact">
+      <div>
+        <h2 class="script">Contact Me</h2>
+        <ul class="rows">
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><span class="val">+1 437-237-9119</span><button class="btn ghost small" type="button" data-copy="+1 437-237-9119">Copy</button></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span><span class="val">Canada</span></li>
+          <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.1L12 12.3 19.5 7.1V7z"/></svg></span><span class="val">henapxtel@gmail.com</span><button class="btn ghost small" type="button" data-copy="henapxtel@gmail.com">Copy</button></li>
+        </ul>
+        <p class="tag">Let's Create Something Amazing Together!</p>
+        <div class="cta-row">
+          <a class="btn" href="https://www.instagram.com/henapxtel/" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn ghost" href="https://www.tiktok.com/@henapxtel" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div class="arch"><img src="img/portrait-beach.webp" alt="Hena Patel sitting on a beach at sunset in an orange dress" loading="lazy" width="800" height="1199"></div>
+    </div>
+  </section>
+
+  <footer><span class="script">Hena Patel</span><span>Social Media Portfolio</span></footer>
+</main>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll('[data-copy]');
+  Array.prototype.forEach.call(buttons, function (btn) {
+    var label = btn.textContent;
+    btn.addEventListener('click', function () {
+      var text = btn.getAttribute('data-copy');
+      function done() { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = label; }, 1600); }
+      function fallback() {
+        var target = btn.previousElementSibling;
+        if (target) {
+          var r = document.createRange(); r.selectNodeContents(target);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        }
+        btn.textContent = 'Selected';
+        setTimeout(function () { btn.textContent = label; }, 1600);
+      }
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+})();
+
+(function () {
+  var vids = document.querySelectorAll('.screen video, .gframe video, .gatsby video');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function toggle(v) { if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); } }
+  Array.prototype.forEach.call(vids, function (v) {
+    if (reduce) { v.removeAttribute('autoplay'); v.pause(); }
+    v.addEventListener('click', function () { toggle(v); });
+    v.addEventListener('keydown', function (e) { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(v); } });
+  });
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = en.target;
+        if (en.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+      });
+    }, { threshold: 0.25 });
+    Array.prototype.forEach.call(vids, function (v) { io.observe(v); });
+  }
+})();
+</script>
+</body>
+</html>
